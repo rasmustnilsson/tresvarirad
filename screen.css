@@ -39,6 +39,49 @@ button:focus {
 	border-radius: 5px;
 	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
 }
+
+
+
+
 .secondScreen {
 	display:none;
+	height: 100%;
+	flex-direction: column;
 }
+.top{
+	flex: 2;
+	background-color:#C02F1D;
+	border: none;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+}
+.middle {
+	flex: 5;
+	text-align: center;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+}
+.bottom {
+	flex: 2;
+	background-color:#C02F1D;
+	border: none;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.middle > h3 {
+	margin-top: 1em;
+	font-size: 3em;
+	margin-bottom: 1em;
+	color: grey;
+}
+.middle > p {
+	font-size: 2em;
+	color: black
+}
+.top > h2 {
+	font-size: 2em;
+	margin-top: 1.5em;
+	text-align: center;
+}
+.bottom > p {
+	margin-top: 1.5em;
