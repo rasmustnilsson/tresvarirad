@@ -60,6 +60,7 @@ function myTimer() {
 	$(".timer").text(time);
 	if (time == 0) {
 		clearTimer();
+		$(".startButton").text("Starta timer");
 	}
 }
 
@@ -73,8 +74,11 @@ function clearTimer() {
 $(".startButton").on("click", function() {
 	if(!timerRunning) {
 		startTimer();
+		$(".startButton").text("Stoppa timer");
+		$(".timer").text("5");
 	} else {
-		clearTimer()
+		clearTimer();
+		$(".startButton").text("Starta timer");
 	}
 });
 
