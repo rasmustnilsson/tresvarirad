@@ -22,20 +22,25 @@ var statement = [ //en array med alla uttryck
 	"uttryck 7"
 ]
 
-var usedStatements = [1, 2, 3]; //använda statementsindexes
-
-function newStatement() { //spottar ut en random statement som inte har användts förr
-	function newStatementInfo() {
+var usedStatements = []; //använda statementsindexes
+var lastStatement;
+function newStatement() { //spottar ut ett random statement som inte har användts förr
+	function newStatementIndex() {
 		var index = Math.floor(Math.random()*statement.length);
-		return statement[index];
+		return index;
 	}
-	var newStatement = newStatementInfo();
-	console.log(newStatement);
-	for (var i = 0; i < usedStatements.length; ++i) {
-		if(statement[usedStatements[i]] == newStatement) {
-			console.log(true);
+	var statementIndex = newStatementIndex();
+	for(var i = 0; i < usedStatements.length; i++) { //loopar genom använda uttryck
+		if(usedStatements[i] == statementIndex && lastStatement == statementIndex) { //kollar om det nya är samma som ett använt eller samma som innan reseten
+			i = -1;
+			if (usedStatements.length == statement.length) {
+				usedStatements = [];
+			}
+			statementIndex = newStatementIndex();
 		}
 	}
-	newStatementInfo();
-	$(".secondScreen p").text("hello");
+	usedStatements.push(statementIndex);
+	lastStatement = statementIndex;
+	var newStatement = statement[statementIndex];
+	$(".middle > p").text(newStatement); //printar ut det nya uttrycket
 }
