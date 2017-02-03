@@ -75,7 +75,7 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 	}
 	var statementIndex = newStatementIndex();
 	for(var i = 0; i < usedStatements.length; i++) { //loopar genom använda uttryck
-		if(usedStatements[i] == statementIndex && lastStatement == statementIndex) { //kollar om det nya är samma som ett använt eller samma som innan reseten
+		if(usedStatements[i] == statementIndex || lastStatement == statementIndex) { //kollar om det nya är samma som ett använt eller samma som innan reseten
 			i = -1;
 			if (usedStatements.length == statement.length) {
 				usedStatements = [];
@@ -84,12 +84,12 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 		}
 	}
 	usedStatements.push(statementIndex);
+	console.log(usedStatements);
 	lastStatement = statementIndex;
 	var newStatement = statement[statementIndex];
 	$(".middle > p").text(newStatement); //printar ut det nya uttrycket
 }
 
-newStatement();
 
 var timer;
 var time = 5;
