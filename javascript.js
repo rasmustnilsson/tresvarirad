@@ -84,7 +84,6 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 		}
 	}
 	usedStatements.push(statementIndex);
-	console.log(usedStatements);
 	lastStatement = statementIndex;
 	var newStatement = statement[statementIndex];
 	$(".middle > p").text(newStatement); //printar ut det nya uttrycket
