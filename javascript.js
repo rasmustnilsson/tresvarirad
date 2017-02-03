@@ -44,3 +44,40 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 	var newStatement = statement[statementIndex];
 	$(".middle > p").text(newStatement); //printar ut det nya uttrycket
 }
+
+newStatement();
+
+var timer;
+var time = 5;
+var timerRunning = false;
+
+function startTimer() {
+	timerRunning = true;
+	timer = setInterval(function(){ myTimer() }, 1000);
+}
+function myTimer() {
+	time -= 1;
+	$(".timer").text(time);
+	if (time == 0) {
+		clearTimer();
+	}
+}
+
+function clearTimer() {
+    clearInterval(timer);
+	$(".timer").text("0");
+	time = 5;
+	timerRunning = false;
+}
+
+$(".startButton").on("click", function() {
+	if(!timerRunning) {
+		startTimer();
+	} else {
+		clearTimer()
+	}
+});
+
+$(".nextStatementButton").on("click", function() {
+	newStatement();
+});

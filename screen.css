@@ -39,10 +39,6 @@ button:focus {
 	border-radius: 5px;
 	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
 }
-
-
-
-
 .secondScreen {
 	display:none;
 	height: 100%;
@@ -52,7 +48,6 @@ button:focus {
 	flex: 2;
 	background-color:#C02F1D;
 	border: none;
-    border-radius: 0px 0px 5px 5px;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
 }
 .middle {
@@ -64,8 +59,10 @@ button:focus {
 	flex: 2;
 	background-color:#C02F1D;
 	border: none;
-    border-radius: 5px 5px 0px 0px;
     box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.6);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .middle > h3 {
@@ -84,4 +81,15 @@ button:focus {
 	text-align: center;
 }
 .bottom > p {
-	margin-top: 1.5em;
+	margin-top: 32px;
+	font-size: 2em;
+	text-align: center;
+}
+.bottom > div {
+	margin: 50px 0;
+	display: flex;
+	justify-content: center;
+}
+.bottom div button {
+	margin: 0 16px;
+}

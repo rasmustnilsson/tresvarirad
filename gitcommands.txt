@@ -1,8 +1,12 @@
 git remote add origin https://github.com/tachnik/Tcspel.git
 
+
+//lägg till skit
 git add *
 git commit -m "meddelande"
 git push -u origin master
+
+//synka skit
 git pull origin master
 
 
