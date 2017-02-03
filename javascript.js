@@ -129,3 +129,20 @@ $(".startButton").on("click", function() {
 $(".nextStatementButton").on("click", function() {
 	newStatement();
 });
+
+
+function onLoad() {
+    document.addEventListener("deviceready", onDeviceReady, false);
+}
+
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+	if($(".firstScreen").css("display") == "none") {
+		switchWindow("first");
+	} else {
+		navigator.app.exitApp();
+	}
+}
