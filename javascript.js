@@ -7,7 +7,6 @@ function switchWindow(window) { //funktion som byter screen till den man stoppar
 		$(".secondScreen").css("display", 'flex');
 	}
 }
-
 $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 	switchWindow("second");
 })
@@ -89,6 +88,7 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 	$(".middle > p").text(newStatement); //printar ut det nya uttrycket
 }
 
+newStatement();
 
 var timer;
 var time = 5;
@@ -109,7 +109,6 @@ function myTimer() {
 
 function clearTimer() {
     clearInterval(timer);
-	$(".timer").text("0");
 	time = 5;
 	timerRunning = false;
 }
@@ -119,14 +118,20 @@ $(".startButton").on("click", function() {
 		startTimer();
 		$(".startButton").text("Stoppa timer");
 		$(".timer").text("5");
+		progressBar();
 	} else {
 		clearTimer();
 		$(".startButton").text("Starta timer");
+		clearInterval(interval);
 	}
 });
 
 $(".nextStatementButton").on("click", function() {
 	newStatement();
+	clearTimer();
+	clearInterval(interval);
+	$(".timer").text("5");
+	$(".bar").css("width", '0');
 });
 
 
@@ -144,4 +149,16 @@ function onBackKeyDown() {
 	} else {
 		navigator.app.exitApp();
 	}
+}
+var interval;
+function progressBar() {
+	var bar = $(".bar");
+	var width = 0.2;
+	interval = setInterval(function() {
+		bar.css("width", width + "%");
+		if(width == 100) {
+			clearInterval(interval);
+		}
+		width = Math.round((width + 0.2)*10)/10;
+	},  10)
 }
