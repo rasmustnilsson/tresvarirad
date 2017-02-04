@@ -116,6 +116,6 @@ button:focus {
 }
 .bar {
 	height: 100%;
-	width: 5px;
+	width: 0px;
 	background-color: green;
 }
