@@ -91,7 +91,7 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 newStatement();
 
 var timer;
-var time = 5;
+var time = 7;
 var timerRunning = false;
 
 function startTimer() {
@@ -109,7 +109,7 @@ function myTimer() {
 
 function clearTimer() {
     clearInterval(timer);
-	time = 5;
+	time = 7;
 	timerRunning = false;
 }
 
@@ -117,7 +117,7 @@ $(".startButton").on("click", function() {
 	if(!timerRunning) {
 		startTimer();
 		$(".startButton").text("Stoppa timer");
-		$(".timer").text("5");
+		$(".timer").text("7");
 		progressBar();
 	} else {
 		clearTimer();
@@ -130,8 +130,10 @@ $(".nextStatementButton").on("click", function() {
 	newStatement();
 	clearTimer();
 	clearInterval(interval);
-	$(".timer").text("5");
-	$(".bar").css("width", '0');
+	$(".bar").css("width", '0');	
+	$(".timer").text("7");
+	startTimer();
+	progressBar();
 });
 
 
@@ -153,12 +155,17 @@ function onBackKeyDown() {
 var interval;
 function progressBar() {
 	var bar = $(".bar");
-	var width = 0.2;
+	var timeLength = 7;
+	var width = 1/timeLength;
 	interval = setInterval(function() {
-		bar.css("width", width + "%");
-		if(width == 100) {
+		if(width + 1/timeLength >= 100) {
+			bar.css("width", "100%");
+		} else {
+			bar.css("width", width + "%");
+		}
+		if(width >= 100) {
 			clearInterval(interval);
 		}
-		width = Math.round((width + 0.2)*10)/10;
+		width = width + 1/timeLength;
 	},  10)
 }
