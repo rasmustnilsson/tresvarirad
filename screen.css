@@ -29,6 +29,7 @@ h1 {
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
+	background: #E4D9FF;
 }
 .buttonDiv {
 	display: flex;
@@ -40,22 +41,23 @@ button:focus {
 }
 .knapp {
 	font-size: 1.5em;
-	background-color: #C02F1D;
 	padding: 0.8em 2em;
 	margin: 0.5em 1em;
-	color: white;
 	border: none;
-	border-radius: 5px;
 	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+	background: #1E2749;
+    border-radius: 6px;
+    color: white;
 }
 .secondScreen {
 	display:none;
 	height: 100%;
 	flex-direction: column;
+	background: #E4D9FF;
 }
 .top{
 	flex: 2;
-	background-color:#C02F1D;
+	background-color: #273469;
 	border: none;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
 }
@@ -66,7 +68,7 @@ button:focus {
 }
 .bottom {
 	flex: 2;
-	background-color:#C02F1D;
+	background-color: #273469;
 	border: none;
     box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.6);
 	display: flex;
@@ -78,7 +80,7 @@ button:focus {
 	margin-top: 1em;
 	font-size: 3em;
 	margin-bottom: 1em;
-	color: grey;
+	color: #1E2749;
 }
 .middle > p {
 	font-size: 2em;
@@ -105,7 +107,10 @@ button:focus {
 	width: 144px;
 	padding: 14px 0;
 	border: none;
-	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.6);
+	    background: #1E2749;
+    border-radius: 6px;
+    color: white;
 }
 .loadingBar {
 	width: 100%;
@@ -117,5 +122,5 @@ button:focus {
 .bar {
 	height: 100%;
 	width: 0px;
-	background-color: green;
+	background-color: #950952;
 }
