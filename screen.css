@@ -20,9 +20,15 @@ body {
 	font-weight: bold;
 }
 h1 {
+	font-size: 3em;
 	text-align: center;
 	margin-top: 20%;
-	
+	font-weight: normal;
+}
+h1 span {
+	height: 200px;
+	position: absolute;
+	transform-origin: bottom center;
 }
 .firstScreen {
 	height: 100%;
