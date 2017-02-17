@@ -7,14 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 		<script src="jquery-3.1.1.min.js"></script>
-		<script src="javascript.js"></script>
+		<script src="cordova.js"></script>
+		<script src="admob.js"></script>
 	</head>
 	<body onload="onLoad()">
 		<div class="firstScreen">
 			<h1>3 Snabba Svar</h1>
 			<div class="buttonDiv">
 				<button class="startknapp knapp">Spela</button>
-				<button class="reglerknapp knapp">Regler och hjälp</button>
+				<button class="reglerknapp knapp" onclick="showInterstitialFunc()">Regler och hjälp</button>
 			</div>
 		</div>
 		<div class="secondScreen">
