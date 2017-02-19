@@ -36,6 +36,8 @@ h1 span {
 	justify-content: space-around;
 	flex-direction: column;
 	background: #f6f2ff;
+	background-image: url(backgroundimage.png);
+    background-size: cover;
 }
 .buttonDiv {
 	display: flex;
@@ -51,7 +53,7 @@ button:focus {
 	margin: 0.5em 1em;
 	border: none;
 	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
-	background: #1E2749;
+	background: #223583;
     border-radius: 6px;
     color: white;
 }
@@ -63,7 +65,7 @@ button:focus {
 }
 .top{
 	flex: 2;
-	background-color: #273469;
+	background-color: #223583;
 	border: none;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
 }
@@ -74,7 +76,7 @@ button:focus {
 }
 .bottom {
 	flex: 2;
-	background-color: #273469;
+	background-color: #223583;
 	border: none;
     box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.6);
 	display: flex;
@@ -86,7 +88,7 @@ button:focus {
 	margin-top: 1em;
 	font-size: 3em;
 	margin-bottom: 1em;
-	color: #1E2749;
+	color: #69696a;
 }
 .middle > p {
 	font-size: 2em;
@@ -113,10 +115,10 @@ button:focus {
 	width: 144px;
 	padding: 14px 0;
 	border: none;
-	box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.6);
-	    background: #1E2749;
-    border-radius: 6px;
-    color: white;
+	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
+	background: #C1901E;
+    border-radius: 4px;
+    color: black;
 }
 .loadingBar {
 	width: 100%;
@@ -128,5 +130,5 @@ button:focus {
 .bar {
 	height: 100%;
 	width: 0px;
-	background-color: #950952;
+	background-color: #a87809;
 }
