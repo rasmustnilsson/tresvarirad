@@ -59,7 +59,7 @@ button:focus {
 	display:none;
 	height: 100%;
 	flex-direction: column;
-	background: #E4D9FF;
+	background: #f6f2ff;
 }
 .top{
 	flex: 2;

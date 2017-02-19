@@ -62,7 +62,17 @@ var statement = [ //en array med alla uttryck
 	"farliga platser",
 	"låt-titlar",
 	"karaktärer i Emil i Lönneberga",
-	"rätter man kan beställa på kinaresturang"
+	"rätter man kan beställa på kinaresturang",
+	"maträtter",
+	"Energidrycker",
+	"Personer på sedlar",
+	"Telefontillverkare",
+	"Lärare du hade i högstadiet",
+	"Ord på Ryska",
+	"Saker som börjar på E",
+	"First Person Shooter spel",
+	"Sommarplågor",
+	"Låtar från Melodifestivalen"
 ]
 
 var usedStatements = []; //använda statementsindexes
