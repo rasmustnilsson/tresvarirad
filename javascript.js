@@ -132,22 +132,19 @@ function clearTimer() {
 }
 var spinTimerRunning = false;
 $(".replayButton").on("click", function() {
+	$(".replayButton").css("animation-duration", '');
 	clearTimer();
 	clearInterval(interval);
-	$(".bar").css("width", '0');	
+	$(".bar").css("width", '0');
 	$(".timer").text("7");
 	startTimer();
 	progressBar();
-	$(".replayButton").addClass("replaySpin");
-	if(!spinTimerRunning) {
-		spinTimerRunning = true;
-		setTimeout(function() {
-			$(".replayButton").removeClass("replaySpin");
-			spinTimerRunning = false;
-		}, 1000);
-	}
-	
+	var el = $(this);
+    el.before( el.clone(true) ).remove();
 });
+
+$(".replayButton").css("animation-duration", '0s');
+$(".replayButton").addClass("replaySpin");
 
 $(".nextStatementButton").on("click", function() {
 	newStatement();

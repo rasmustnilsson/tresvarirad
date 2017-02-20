@@ -125,7 +125,7 @@ button:focus {
 }
 
 .replaySpin {
-	animation: spin 0.8s;
+	animation: spin 0.7s;
 }
 
 @keyframes spin {
