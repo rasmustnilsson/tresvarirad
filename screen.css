@@ -111,4 +111,5 @@ button:focus {
 	width: auto;
 	height: 30px;
 	margin: 5px;
+	opacity: 0.5;
 }
