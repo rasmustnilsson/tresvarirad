@@ -94,11 +94,12 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 	}
 	usedStatements.push(statementIndex);
 	lastStatement = statementIndex;
+	var ptag = $(".secondScreen p:first-of-type");
 	var newStatement = statement[statementIndex];
-	$(".secondScreen p").fadeTo(200, 0, function() {
-		$(".secondScreen p").text(newStatement); //printar ut det nya uttrycket
+	ptag.fadeTo(200, 0, function() {
+		ptag.text(newStatement); //printar ut det nya uttrycket
 	});
-	$(".secondScreen p").fadeTo(200, 1);
+	ptag.fadeTo(200, 1);
 }
 
 newStatement();
