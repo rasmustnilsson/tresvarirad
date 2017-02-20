@@ -74,7 +74,8 @@ button:focus {
 	color: white;
 	font-size: 10vw;
 	text-align: center;
-	padding-bottom: 50px;
+	padding: 50px;
+	height: 4em;
 }
 .secondScreen button {
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
