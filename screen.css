@@ -76,7 +76,7 @@ button:focus {
 	font-size: 7vw;
 	padding-bottom: 30px;
 }
-.secondScreen p:first-of-type {
+.secondScreen div p {
 	height: 4em;
 	font-size: 10vw;
 	padding-bottom: 0;
@@ -116,9 +116,8 @@ button:focus {
 .replayButton {
 	position: absolute;
 	width: auto;
-	height: 30px;
-	margin: 5px;
+	height: 32px;
 	opacity: 0.5;
-	bottom: 30px;	
-	left: 20px;
+	transform: translate(-100%, -37.5%);
+	padding-right: 5px;
 }

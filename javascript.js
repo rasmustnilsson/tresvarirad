@@ -98,7 +98,7 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 	}
 	usedStatements.push(statementIndex);
 	lastStatement = statementIndex;
-	var ptag = $(".secondScreen p:first-of-type");
+	var ptag = $(".secondScreen div p");
 	var newStatement = statement[statementIndex];
 	ptag.fadeTo(200, 0, function() {
 		ptag.text(newStatement); //printar ut det nya uttrycket
@@ -131,17 +131,13 @@ function clearTimer() {
 	timerRunning = false;
 }
 
-$(".startButton").on("click", function() {
-	if(!timerRunning) {
-		startTimer();
-		$(".startButton").text("Stoppa timer");
-		$(".timer").text("7");
-		progressBar();
-	} else {
-		clearTimer();
-		$(".startButton").text("Starta timer");
-		clearInterval(interval);
-	}
+$(".replayButton").on("click", function() {
+	clearTimer();
+	clearInterval(interval);
+	$(".bar").css("width", '0');	
+	$(".timer").text("7");
+	startTimer();
+	progressBar();
 });
 
 $(".nextStatementButton").on("click", function() {
@@ -153,7 +149,6 @@ $(".nextStatementButton").on("click", function() {
 	startTimer();
 	progressBar();
 });
-
 
 function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
