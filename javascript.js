@@ -95,10 +95,10 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 	usedStatements.push(statementIndex);
 	lastStatement = statementIndex;
 	var newStatement = statement[statementIndex];
-	$(".middle > p").fadeTo(200, 0, function() {
-		$(".middle > p").text(newStatement); //printar ut det nya uttrycket
+	$(".secondScreen p").fadeTo(200, 0, function() {
+		$(".secondScreen p").text(newStatement); //printar ut det nya uttrycket
 	});
-	$(".middle > p").fadeTo(200, 1);
+	$(".secondScreen p").fadeTo(200, 1);
 }
 
 newStatement();
