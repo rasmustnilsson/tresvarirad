@@ -130,7 +130,7 @@ function clearTimer() {
 	time = 7;
 	timerRunning = false;
 }
-
+var spinTimerRunning = false;
 $(".replayButton").on("click", function() {
 	clearTimer();
 	clearInterval(interval);
@@ -138,6 +138,15 @@ $(".replayButton").on("click", function() {
 	$(".timer").text("7");
 	startTimer();
 	progressBar();
+	$(".replayButton").addClass("replaySpin");
+	if(!spinTimerRunning) {
+		spinTimerRunning = true;
+		setTimeout(function() {
+			$(".replayButton").removeClass("replaySpin");
+			spinTimerRunning = false;
+		}, 1000);
+	}
+	
 });
 
 $(".nextStatementButton").on("click", function() {
