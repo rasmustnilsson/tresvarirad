@@ -104,3 +104,11 @@ button:focus {
 	border-radius: 5px;
 	
 }
+.secondScreen img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: 30px;
+	margin: 5px;
+}

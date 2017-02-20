@@ -11,6 +11,10 @@ $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 	switchWindow("second");
 })
 
+$(".secondScreen img").on("click", function() { //när man klickar på spelaknappen
+	switchWindow("help");
+})
+
 var statement = [ //en array med alla uttryck
 	"sporter där du kastar något",
 	"titlar på barnböcker",
