@@ -5,14 +5,19 @@ function switchWindow(window) { //funktion som byter screen till den man stoppar
 	} else if (window == "second") {
 		$(".firstScreen").css("display", 'none');
 		$(".secondScreen").css("display", 'flex');
+	} else if (window == "help") {
+		$(".helpScreen").css("display", 'block');
 	}
 }
+
 $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 	switchWindow("second");
 })
 
-$(".secondScreen img").on("click", function() { //när man klickar på spelaknappen
-	switchWindow("help");
+$(".questionDiv").on("click", function() { //när man klickar på spelaknappen
+	$(".questionButton").css("zIndex", '10');
+	$(".helpScreen").fadeIn(500);
+	 $('.questionButton').attr('src', 'img/questionmarkW.png');
 })
 
 var statement = [ //en array med alla uttryck
