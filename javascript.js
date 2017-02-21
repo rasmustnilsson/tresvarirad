@@ -7,11 +7,9 @@ function switchWindow(window) { //funktion som byter screen till den man stoppar
 		$(".firstScreen").css("display", 'none');
 		$(".secondScreen").css("display", 'flex');
 		$(".helpScreen").css("display", 'none');
-	} else if (window == "help") {
-		$(".helpScreen").css("display", 'block');
 	}
 }
-
+switchWindow("second");
 $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 	switchWindow("second");
 })
@@ -204,7 +202,7 @@ var parent, ink, d, x, y;
 
 $(function(){
 	var ink, d, x, y;
-	$(".secondScreen span button").click(function(e){
+	$(".secondScreen span button").on("click", function(e){
     if($(this).find(".ink").length === 0){
         $(this).prepend("<span class='ink'></span>");
     }
