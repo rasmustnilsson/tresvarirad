@@ -83,7 +83,7 @@ var statement = [ //en array med alla uttryck
 	"Saker som börjar på E",
 	"First Person Shooter spel",
 	"Sommarplågor (låtar)",
-	"Låtar från Melodifestivalen"
+	"Låtar från Melodifestivalen",
 	"Döda kändisar",
 	"Star Wars karaktärer",
 	"Efternamn",
