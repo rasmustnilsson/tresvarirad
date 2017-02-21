@@ -84,7 +84,6 @@ button:focus {
 	padding-top: 30px;
 }
 .secondScreen button {
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
 	padding: 15px 50px;
 	border-radius: 4px;
 	background-color: #ad2a1a;
@@ -95,6 +94,7 @@ button:focus {
 .secondScreen > span {
 	position: relative;
 	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
 }
 
 .loadingBar {
