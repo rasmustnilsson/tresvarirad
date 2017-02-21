@@ -75,8 +75,12 @@ var statement = [ //en array med alla uttryck
 	"Ord på Ryska",
 	"Saker som börjar på E",
 	"First Person Shooter spel",
-	"Sommarplågor",
+	"Sommarplågor (låtar)",
 	"Låtar från Melodifestivalen"
+	"Döda kändisar",
+	"Star Wars karaktärer",
+	"Efternamn",
+	"Gymnasieprogram"
 ]
 
 var usedStatements = []; //använda statementsindexes
@@ -140,7 +144,7 @@ $(".replayButton").on("click", function() {
 	startTimer();
 	progressBar();
 	var el = $(this);
-    el.before( el.clone(true) ).remove();
+    el.before(el.clone(true)).remove();
 });
 
 $(".replayButton").css("animation-duration", '0s');
