@@ -197,7 +197,7 @@ var statement = [ //en array med alla uttryck
 	"astrologiska stjärntecken",
 	"redskap till gräsmattan",
 	"saker folk klagar på",
-	"klädesplagg för vintern"
+	"klädesplagg för vintern",
 	"saker som gör folk nervösa",
 	"gator i monopol",
 	"saker som man grälar om",
