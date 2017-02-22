@@ -17,7 +17,6 @@ $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 $(".questionDiv").on("click", function() { //när man klickar på spelaknappen
 	$(".questionButton").css("zIndex", '10');
 	$(".helpScreen").fadeToggle(500);
-	$('.questionButton').attr('src', 'img/questionmarkW.png');
 })
 
 var statement = [ //en array med alla uttryck
