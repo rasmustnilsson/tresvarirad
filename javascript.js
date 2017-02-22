@@ -14,9 +14,15 @@ $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 	switchWindow("second");
 })
 
-$(".questionDiv").on("click", function() { //när man klickar på spelaknappen
+
+function toggleHelp() {
 	$(".questionButton").css("zIndex", '10');
 	$(".helpScreen").fadeToggle(500);
+}
+
+
+$(".questionDiv").on("click", function() { //när man klickar på spelaknappen
+	toggleHelp();
 })
 
 var statement = [ //en array med alla uttryck
@@ -523,17 +529,9 @@ $(".nextStatementButton").on("click", function() {
 	progressBar();
 });
 
-function onLoad() {
-    document.addEventListener("deviceready", onDeviceReady, false);
-}
-
-function onDeviceReady() {
-    document.addEventListener("backbutton", onBackKeyDown, false);
-}
-
 function onBackKeyDown() {
-	if($(".firstScreen").css("display") == "none") {
-		switchWindow("first");
+	if($(".helpScreen").css("display") != "none") {
+		toggleHelp();
 	} else {
 		navigator.app.exitApp();
 	}
