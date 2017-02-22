@@ -89,6 +89,8 @@ button:focus {
 	background-color: #ad2a1a;
 	color: white;
 	border: none;
+	position: relative;
+    overflow: hidden;
 }
 
 .secondScreen > span {
