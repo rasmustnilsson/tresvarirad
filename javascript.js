@@ -16,8 +16,7 @@ $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 
 
 function toggleHelp() {
-	$(".questionButton").css("zIndex", '10');
-	$(".helpScreen").fadeToggle(500);
+	$(".helpScreen").stop(true, false).fadeToggle(500);
 }
 
 
@@ -473,10 +472,10 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 	lastStatement = statementIndex;
 	var ptag = $(".secondScreen div p");
 	var newStatement = statement[statementIndex];
+	ptag.stop(true, true);
 	ptag.fadeTo(200, 0, function() {
 		ptag.text(newStatement); //printar ut det nya uttrycket
-	});
-	ptag.fadeTo(200, 1);
+	}).fadeTo(200, 1);
 }
 
 newStatement();
