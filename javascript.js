@@ -17,6 +17,14 @@ $(".startknapp").on("click", function() { //när man klickar på spelaknappen
 
 function toggleHelp() {
 	$(".helpScreen").stop(true, false).fadeToggle(500);
+	if($(".secondScreen").hasClass("blur")) {
+		$(".secondScreen").removeClass("blur");
+		$(".secondScreen").addClass("unBlur");
+	} else {
+		$(".secondScreen").removeClass("unBlur");
+		$(".secondScreen").addClass("blur");
+	}
+	
 }
 
 

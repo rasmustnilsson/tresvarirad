@@ -141,6 +141,7 @@ button:focus {
 	background-color: black;
 	position: absolute;
 	top: 0;
+	opacity: 0.8;
 	display: none;
 }
 .helptext {
@@ -174,5 +175,32 @@ button:focus {
 	100% {
 		opacity: 0;
 		transform: scale(2.5);
+	}
+}
+
+.blur {
+	-webkit-animation: blur 1s forwards;
+}
+
+.unBlur {
+	-webkit-filter: blur(5px);
+	-webkit-animation: unBlur 1s forwards;
+}
+
+@-webkit-keyframes blur {
+	0%  {
+		-webkit-filter: blur(0px);
+	}
+	100% { 
+		-webkit-filter: blur(5px);
+	}
+}
+
+@-webkit-keyframes unBlur {
+	0%  {
+		-webkit-filter: blur(5px);
+	}
+	100% { 
+		-webkit-filter: blur(0px);
 	}
 }
