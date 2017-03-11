@@ -33,7 +33,7 @@ h1 span {
 }
 h3 {
 	color: #797979;
-	font-size: 8vw;
+	font-size: 8vmin;
 	font-family: 'Pacifico', cursive;
 	padding: 10px;
 	text-align:center;
@@ -74,19 +74,19 @@ button:focus {
 }
 .secondScreen h2 {
 	color: #797979;
-	font-size: 20vw;
+	font-size: 20vmin;
 	padding-bottom: 30px;
 	font-family: 'Pacifico', cursive;
 }
 .secondScreen p {
 	color: white;
 	text-align: center;
-	font-size: 7vw;
+	font-size: 7vmin;
 	padding-bottom: 30px;
 }
 .secondScreen div p {
 	height: 4em;
-	font-size: 10vw;
+	font-size: 10vmin;
 	padding: 30px 30px 0;
 }
 .secondScreen button {
@@ -152,11 +152,11 @@ button:focus {
 	display: none;
 }
 .helptext {
-	padding: 10px;
+	padding: 10px 16px;
 	font-family: 'Roboto', sans-serif;
 	color: white;
 	margin-top: 20px;
-	font-size: 3vh;
+	font-size: 26px;
 	
 }
 
