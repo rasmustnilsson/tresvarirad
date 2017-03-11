@@ -31,6 +31,13 @@ h1 span {
 	position: absolute;
 	transform-origin: bottom center;
 }
+h3 {
+	color: #797979;
+	font-size: 8vw;
+	font-family: 'Pacifico', cursive;
+	padding: 10px;
+	text-align:center;
+}
 .firstScreen {
 	height: 100%;
 	display: flex;
@@ -147,7 +154,7 @@ button:focus {
 	padding: 10px;
 	font-family: 'Roboto', sans-serif;
 	color: white;
-	margin-top: 100px;
+	margin-top: 20px;
 	font-size: 3vh;
 	
 }
