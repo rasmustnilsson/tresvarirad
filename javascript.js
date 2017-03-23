@@ -489,8 +489,10 @@ function newStatement() { //spottar ut ett random statement som inte har använd
 newStatement();
 
 var timer;
-var time = 7;
+var originaltime = 5;
+var time = originaltime;
 var timerRunning = false;
+var firstClick = true;
 
 function startTimer() {
 	timerRunning = true;
@@ -507,8 +509,10 @@ function myTimer() {
 
 function clearTimer() {
     clearInterval(timer);
-	time = 7;
+	$(".timer").text(originaltime);
+	time = originaltime;
 	timerRunning = false;
+	clearInterval(interval);
 }
 var spinTimerRunning = false;
 $(".replayButton").on("click", function() {
@@ -516,7 +520,7 @@ $(".replayButton").on("click", function() {
 	clearTimer();
 	clearInterval(interval);
 	$(".bar").css("width", '0');
-	$(".timer").text("7");
+	$(".timer").text(originaltime);
 	startTimer();
 	progressBar();
 	var el = $(this);
@@ -527,13 +531,18 @@ $(".replayButton").css("animation-duration", '0s');
 $(".replayButton").addClass("replaySpin");
 
 $(".nextStatementButton").on("click", function() {
-	newStatement();
-	clearTimer();
-	clearInterval(interval);
-	$(".bar").css("width", '0');	
-	$(".timer").text("7");
-	startTimer();
-	progressBar();
+	if(firstClick) {
+		$(".nextStatementButton").text("Starta timer");
+		newStatement();
+		clearTimer();
+		$(".bar").css("width", '100%');	
+		firstClick = false;
+	} else {
+		$(".nextStatementButton").text("Nästa");
+		startTimer();
+		progressBar();
+		firstClick = true;
+	}
 });
 
 function onBackKeyDown() {
@@ -546,7 +555,8 @@ function onBackKeyDown() {
 var interval;
 function progressBar() {
 	var bar = $(".bar");
-	var timeLength = 7;
+	bar.css("width", '0');	
+	var timeLength = originaltime;
 	var width = 1/timeLength;
 	interval = setInterval(function() {
 		if(width + 1/timeLength >= 100) {
