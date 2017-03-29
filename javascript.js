@@ -502,8 +502,10 @@ function myTimer() {
 	time -= 1;
 	$(".timer").text(time);
 	if (time == 0) {
-		clearTimer();
 		$(".startButton").text("Starta timer");
+		clearTimer();
+			$(".timer").text(0);
+		
 	}
 }
 
@@ -537,6 +539,7 @@ $(".nextStatementButton").on("click", function() {
 		clearTimer();
 		$(".bar").css("width", '100%');	
 		firstClick = false;
+		
 	} else {
 		$(".nextStatementButton").text("Nästa");
 		startTimer();
