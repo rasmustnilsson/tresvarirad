@@ -24,7 +24,7 @@ function toggleHelp() {
 		$(".secondScreen").removeClass("unBlur");
 		$(".secondScreen").addClass("blur");
 	}
-	
+
 }
 
 
@@ -505,7 +505,7 @@ function myTimer() {
 		$(".startButton").text("Starta timer");
 		clearTimer();
 			$(".timer").text(0);
-		
+
 	}
 }
 
@@ -516,15 +516,11 @@ function clearTimer() {
 	timerRunning = false;
 	clearInterval(interval);
 }
+
 var spinTimerRunning = false;
 $(".replayButton").on("click", function() {
+	startFunction();
 	$(".replayButton").css("animation-duration", '');
-	clearTimer();
-	clearInterval(interval);
-	$(".bar").css("width", '0');
-	$(".timer").text(originaltime);
-	startTimer();
-	progressBar();
 	var el = $(this);
     el.before(el.clone(true)).remove();
 });
@@ -533,20 +529,25 @@ $(".replayButton").css("animation-duration", '0s');
 $(".replayButton").addClass("replaySpin");
 
 $(".nextStatementButton").on("click", function() {
-	if(firstClick) {
+	if(!firstClick) {
 		$(".nextStatementButton").text("Starta timer");
 		newStatement();
 		clearTimer();
-		$(".bar").css("width", '100%');	
-		firstClick = false;
-		
-	} else {
-		$(".nextStatementButton").text("Nästa");
-		startTimer();
-		progressBar();
+		$(".bar").css("width", '100%');
 		firstClick = true;
+
+	} else {
+		startFunction();
 	}
 });
+
+function startFunction() {
+	$(".nextStatementButton").text("Nästa");
+	clearTimer();
+	startTimer();
+	progressBar();
+	firstClick = false;
+}
 
 function onBackKeyDown() {
 	if($(".helpScreen").css("display") != "none") {
@@ -558,7 +559,7 @@ function onBackKeyDown() {
 var interval;
 function progressBar() {
 	var bar = $(".bar");
-	bar.css("width", '0');	
+	bar.css("width", '0');
 	var timeLength = originaltime;
 	var width = 1/timeLength;
 	interval = setInterval(function() {
@@ -582,18 +583,18 @@ $(function(){
     if($(this).find(".ink").length === 0){
         $(this).prepend("<span class='ink'></span>");
     }
-         
+
     ink = $(this).find(".ink");
     ink.removeClass("animate");
-     
+
     if(!ink.height() && !ink.width()){
         d = Math.max($(this).outerWidth(), $(this).outerHeight());
         ink.css({height: d, width: d});
     }
-     
+
     x = e.pageX - $(this).offset().left - ink.width()/2;
     y = e.pageY - $(this).offset().top - ink.height()/2;
-     
+
     ink.css({top: y+'px', left: x+'px'}).addClass("animate");
 });
 });
